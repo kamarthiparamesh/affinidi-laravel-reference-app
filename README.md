@@ -20,8 +20,11 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 <br>
 
 ## Download Base Reference Application
+
+Clone this repo using below command or download zip file [here](https://github.com/kamarthiparamesh/affinidi-laravel-reference-app/archive/refs/heads/main.zip)
+
 ```
-git clone https://gitlab.com/affinidi/prototypes/affinidi-laravel-reference-app.git
+git clone https://github.com/kamarthiparamesh/affinidi-laravel-reference-app.git
 ```
 
 ## Setup & Run application
