@@ -60,15 +60,15 @@ Open the dowloaded directory `affinidi-laravel-reference-app` in VS code or your
  
  4. Update below environment variables in `.env` based on the auth credentials received from the Login Configuration created earlier:
     ```
-    AFFINIDI_CLIENT_ID="<AUTH.CLIENT_ID>"
-    AFFINIDI_CLIENT_SECRET="<AUTH.CLIENT_SECRET>"
-    AFFINIDI_ISSUER="<AUTH.CLIENT_ISSUER>"
+    PROVIDER_CLIENT_ID="<AUTH.CLIENT_ID>"
+    PROVIDER_CLIENT_SECRET="<AUTH.CLIENT_SECRET>"
+    PROVIDER_ISSUER="<AUTH.CLIENT_ISSUER>"
     ```
     Sample values looks like below
     ```
-    AFFINIDI_CLIENT_ID="xxxxx-xxxxx-xxxxx-xxxxx-xxxxx"
-    AFFINIDI_CLIENT_SECRET="xxxxxxxxxxxxxxx"
-    AFFINIDI_ISSUER="https://yyyy-yyy-yyy-yyyy.apse1.login.affinidi.io"
+    PROVIDER_CLIENT_ID="xxxxx-xxxxx-xxxxx-xxxxx-xxxxx"
+    PROVIDER_CLIENT_SECRET="xxxxxxxxxxxxxxx"
+    PROVIDER_ISSUER="https://yyyy-yyy-yyy-yyyy.apse1.login.affinidi.io"
     ```
 5. Run the application
     ```
@@ -279,9 +279,9 @@ public function boot(): void
 3. Add credentials for the OAuth2 affinidi provider, should be placed in your application's `config/services.php` configuration file,
 ```
 'affinidi' => [
-    'base_uri' => env('AFFINIDI_ISSUER'),
-    'client_id' => env('AFFINIDI_CLIENT_ID'),
-    'client_secret' => env('AFFINIDI_CLIENT_SECRET'),
+    'base_uri' => env('PROVIDER_ISSUER'),
+    'client_id' => env('PROVIDER_CLIENT_ID'),
+    'client_secret' => env('PROVIDER_CLIENT_SECRET'),
     'redirect' => '/login/affinidi/callback',
 ],
 ```
